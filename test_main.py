@@ -20,3 +20,11 @@ def test_count_sentences(text, expected):
 def test_count_sentences_with_fixture(complex_text):
     assert count_sentences(complex_text) == 3
 
+# Параметризація для count_words
+@pytest.mark.parametrize("text, expected", [
+    ("Hello, world!", 2),
+    ("One:two;three four", 4),
+    ("   Multiple   spaces   ", 2),
+])
+def test_count_words(text, expected):
+    assert count_words(text) == expected
