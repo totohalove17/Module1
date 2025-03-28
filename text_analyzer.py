@@ -12,7 +12,8 @@ def count_words(text: str) -> int:
     return len(words)
 
 def main():
-    file_path = input("Enter the path to the .txt file: ")
+    #file_path = input("Enter the path to the .txt file: ")
+    file_path = 'test_01.txt'  # Example file path
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
     print(f"Words: {count_words(text)}")
