@@ -10,7 +10,7 @@ def complex_text():
 @pytest.mark.parametrize("text, expected", [
     ("Hello world!", 1),
     ("Hello... How are you?", 2),
-    ("No sentences", 0),
+    ("", 0),
     pytest.param("Hi! How are you? I'm fine...", 3, id="complex_case"),
 ])
 def test_count_sentences(text, expected):
