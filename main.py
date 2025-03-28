@@ -17,3 +17,6 @@ def main():
         text = file.read()
     print(f"Words: {count_words(text)}")
     print(f"Sentences: {count_sentences(text)}")
+
+    if __name__ == "__main__":
+    main()
