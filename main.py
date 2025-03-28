@@ -10,3 +10,10 @@ def count_words(text: str) -> int:
     text = re.sub(r'[,:;]', ' ', text)
     words = text.split()
     return len(words)
+
+def main():
+    file_path = input("Enter the path to the .txt file: ")
+    with open(file_path, 'r', encoding='utf-8') as file:
+        text = file.read()
+    print(f"Words: {count_words(text)}")
+    print(f"Sentences: {count_sentences(text)}")
