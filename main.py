@@ -5,3 +5,8 @@ def count_sentences(text: str) -> int:
     sentences = re.split(r'[.!?]|<ELLIPSIS>', text)
     sentences = [s.strip() for s in sentences if s.strip()]
     return len(sentences)
+
+def count_words(text: str) -> int:
+    text = re.sub(r'[,:;]', ' ', text)
+    words = text.split()
+    return len(words)
