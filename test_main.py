@@ -18,6 +18,7 @@ def complex_text():
 def test_count_sentences(text, expected):
     assert count_sentences(text) == expected
 
+
 # Тест з використанням фікстури complex_text
 def test_count_sentences_with_fixture(complex_text):
     assert count_sentences(complex_text) == 3
@@ -29,6 +30,6 @@ def test_count_sentences_with_fixture(complex_text):
     ("One:two;three four", 4),
     ("   Multiple   spaces   ", 2),
 ])
-
 def test_count_words(text, expected):
     assert count_words(text) == expected
+    
