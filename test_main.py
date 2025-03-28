@@ -12,8 +12,11 @@ def complex_text():
     ("Hello world!", 1),
     ("Hello... How are you?", 2),
     ("", 0),
-    pytest.param("Hi! How are you? I'm fine...", 6, id="complex_case"),
+    pytest.param("Hi! How are you? I'm OK...", 3, id="complex_case"),
 ])
+
+def test_count_sentences(text, expected):
+    assert count_sentences(text) == expected
 
 # Тест з використанням фікстури complex_text
 def test_count_sentences_with_fixture(complex_text):
