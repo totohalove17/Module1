@@ -19,4 +19,4 @@ def main():
     print(f"Sentences: {count_sentences(text)}")
 
     if __name__ == "__main__":
-    main()
+        main()
